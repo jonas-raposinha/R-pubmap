@@ -98,4 +98,4 @@ write.csv(mymaps.frame, "mymaps.csv", row.names = F)
 
 And here is the map:
 
-<a href="https://www.google.com/maps/d/embed?mid=1z0mtNo6B1ZDgp1Gm1UgQEFLWr3LVrrF9" target="_blank"><img src="https://github.com/jonas-raposinha/R-pubmap/blob/master/mapshot.png" alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
+<a href="https://www.google.com/maps/d/embed?mid=1z0mtNo6B1ZDgp1Gm1UgQEFLWr3LVrrF9" target="_blank"><img src="https://github.com/jonas-raposinha/R-pubmap/blob/master/mapshot.png" alt="IMAGE ALT TEXT HERE" width="540" height="360" border="10" /></a>
