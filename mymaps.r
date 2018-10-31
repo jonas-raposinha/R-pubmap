@@ -1,4 +1,4 @@
-#Creates coordinates from Place info in pub.doi to make a Google Mymap of publication entries
+#Creates coordinates from Place info in pub.doi to make a Google MyMap of publication entries
 
 library(RISmed)
 
