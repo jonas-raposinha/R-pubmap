@@ -91,7 +91,7 @@ colnames(mymaps.frame) = c("DOI", "long", "lat")
 for(k in 1:length(doi)){
   mymaps.frame$DOI[k] <- sprintf("http://dx.doi.org/%s", doi[k])
   mymaps.frame$long[k] <- long[k] + runif(1, -0.5, 0.5) #Creates preudolocation by adding random scatter
-  mymaps.frame$lat[k] <- lat[k] + runif(1, -0.15, 0.15) #Creates preudolocation by adding random scatter
+  mymaps.frame$lat[k] <- lat[k] + runif(1, -0.15, 0.15)
 }
 write.csv(mymaps.frame, "mymaps.csv", row.names = F)
 ```
