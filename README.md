@@ -96,6 +96,4 @@ for(k in 1:length(doi)){
 write.csv(mymaps.frame, "mymaps.csv", row.names = F)
 ´´´
 
-And here is the map:
-
-<iframe src="https://www.google.com/maps/d/embed?mid=1z0mtNo6B1ZDgp1Gm1UgQEFLWr3LVrrF9" width="640" height="480"></iframe>
+And here is the [live map](https://www.google.com/maps/d/embed?mid=1z0mtNo6B1ZDgp1Gm1UgQEFLWr3LVrrF9).
