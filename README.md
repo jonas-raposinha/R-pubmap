@@ -57,3 +57,5 @@ for(k in 1:nrecs){
   }
 }
 ```
+
+To extract country names from the titles we first need a list of countries along with their coordinates, such as this data set from [Google Dev!](https://developers.google.com/public-data/docs/canonical/countries_csv). 
