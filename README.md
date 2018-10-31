@@ -47,8 +47,7 @@ aff.list <- vector("character", nrow(pub.doi))
 for(k in 1:nrecs){ 
   test <- try(EUtilsSummary(pub.doi$DOI[k], type='esearch', db='pubmed')) #Gets record from pubmed database by DOI
   while(class(test) == "try-error"){
-    test <- try(EUtilsSummary(pub.doi$DOI[k], type='esearch', db='pubmed')) # Protects loop against Error in file(con, "r") : cannot 
-    open the connection
+    test <- try(EUtilsSummary(pub.doi$DOI[k], type='esearch', db='pubmed')) # Protects loop against Error in file(con, "r") : cannot open the connection
     print("Connection error. Retrying.")
   }
   pubmed.res <- test
