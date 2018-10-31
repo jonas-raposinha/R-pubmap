@@ -58,4 +58,28 @@ for(k in 1:nrecs){
 }
 ```
 
-To extract country names from the titles we first need a list of countries along with their coordinates, such as this data set from [Google Dev!](https://developers.google.com/public-data/docs/canonical/countries_csv). 
+To extract country names from the titles we first need a list of countries along with their coordinates, such as this data set from [Google Dev](https://developers.google.com/public-data/docs/canonical/countries_csv). 
+
+```R
+countries <- read.table("countries.csv", header=F, dec=".", sep=";", quote="\"")
+```
+
+Then we need to search the title column for each country name and save the coordinates for each match. Just for fun I print out the countries found.
+
+```R
+doi <- c()
+long <- c()
+lat <- c()
+
+for(k in 1:nrow(countries)){
+  c.count <- grep(countries$name[k], pub.doi$title, ignore.case = T)
+  if(length(c.count) > 0){
+    doi <- c(doi, as.character(pub.doi$DOI[c.count]))
+    long <- c(long, rep(countries$longitude[k], length(c.count)))
+    lat <- c(lat, rep(countries$latitude[k], length(c.count)))
+    print(as.character(countries$name[k]))
+  }
+}
+```
+
+So then we need to put it all together. Geographic data is often best visualized using maps, but as an alternative to the approaches I shown [elsewhere](https://github.com/jonas-raposinha/R-map-plotting), I will just export the location data and make an interactive map using Google MyMaps. A nice thing about DOIs is that they also work as web links to the online version of the publication, via the International DOI Foundation (link). This allows us to mark the location of each publication with a link to the actual publication. However, if we have more than one data point per country, they will stack on top of each other and not be very easy tell apart. This can be easily fixed with some pseudolocation scattering though.
