@@ -27,7 +27,7 @@ ArticleTitle(test.recs)
 > [1] "7-day compared with 10-day antibiotic treatment for febrile urinary tract infections in children: protocol of a randomised controlled trial."
 ```
 
-Sometimes when my internet connection isn’t very stable, searching the online database fails. If this is not a problem for you, just ignore this section. Connection errors are quite annoying when the call is built into a loop that takes about a tea break to complete for a decently sized list of publications. To protect the loop for this eventuality, we can use the very handy try() call, which allows the call to fail, turning the output into class “try-error”. To implement it, we can do something like this:
+Sometimes when my internet connection isn’t very stable, searching the online database fails. If this is not a problem for you, just ignore this section. Connection errors are quite annoying when the call is built into a loop that takes about a tea break to complete for a decently sized list of publications. To protect the loop from this eventuality, we can use the very handy try() call, which allows the call to fail, turning the output into class “try-error”. To implement it, we can do something like this:
 
 ```R
 test <- try(EUtilsSummary(pub.doi$DOI[k], type='esearch', db='pubmed'))
