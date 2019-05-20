@@ -82,7 +82,7 @@ for(k in 1:nrow(countries)){
 }
 ```
 
-So then we need to put it all together. Geographic data is often best visualized using maps, but as an alternative to the approaches I showed [elsewhere](https://github.com/jonas-raposinha/R-map-plotting), I will just export the location data and make an interactive map using Google MyMaps. A nice thing about DOIs is that they also work as web links to the online version of the publication, via the [International DOI Foundation](http://dx.doi.org/). This allows us to mark the location of each publication with a link to the actual publication. However, if we have more than one data point per country, they will stack on top of each other and not be very easy tell apart. This can be easily fixed with some pseudolocation scattering though.
+So then we need to put it all together. Geographic data is often best visualized using maps, but as an alternative to the approaches I showed [here](https://github.com/jonas-raposinha/R-map-plotting) and [here](https://github.com/jonas-raposinha/R-map-api-data), I will just export the location data and make an interactive map using Google MyMaps. A nice thing about DOIs is that they also work as web links to the online version of the publication, via the [International DOI Foundation](http://dx.doi.org/). This allows us to mark the location of each publication with a link to the actual publication. However, if we have more than one data point per country, they will stack on top of each other and not be very easy tell apart. This can be easily fixed with some pseudolocation scattering though.
 
 ```R
 mymaps.frame <- data.frame(matrix(ncol=3))
